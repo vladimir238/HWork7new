@@ -19,7 +19,6 @@ public class PerHourPaymentWorker extends Worker{
 
     @Override
     public String toString() {
-        NumberFormat fmt = NumberFormat.getCurrencyInstance(Locale.US);
-        return super.toString() + " per hour " + fmt.format(getAveragePayment());
+        return super.toString() + " Почасовая оплата " + getAveragePayment();
     }
 }

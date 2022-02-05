@@ -18,8 +18,7 @@ public class FixPaymentWorker extends Worker{
 
     @Override
     public String toString() {
-        NumberFormat fmt = NumberFormat.getCurrencyInstance(Locale.US);
-        return super.toString() + " fixed " + fmt.format(getAveragePayment());
+        return super.toString() + " Оклад в рублях " + getAveragePayment();
     }
 }
 
