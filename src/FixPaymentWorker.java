@@ -4,9 +4,9 @@ import java.util.Locale;
 
 
 public class FixPaymentWorker extends Worker{
-    private double monthPayment;
+    private int monthPayment;
 
-    FixPaymentWorker(int id, String name, double monthPayment) {
+    FixPaymentWorker(int id, String name, int monthPayment) {
         super(id, name);
         this.monthPayment = monthPayment;
     }

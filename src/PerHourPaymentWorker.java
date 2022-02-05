@@ -5,9 +5,9 @@ import java.util.Locale;
 public class PerHourPaymentWorker extends Worker{
     static final double WORKING_HOURS_IN_MONTH = 8.0 * 20.8;
 
-    private double hourPayment;
+    private int hourPayment;
 
-    PerHourPaymentWorker(int id, String name, double hourPayment) {
+    PerHourPaymentWorker(int id, String name, int hourPayment) {
         super(id, name);
         this.hourPayment = hourPayment;
     }
