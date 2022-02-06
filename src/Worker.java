@@ -11,7 +11,11 @@ abstract class Worker {
         return name;
     }
 
-    abstract double getAveragePayment();
+    public int getId() {
+        return id;
+    }
+
+    abstract int getAveragePayment();
 
     @Override
     public String toString() {

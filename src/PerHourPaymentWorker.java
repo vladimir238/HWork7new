@@ -1,9 +1,5 @@
-import java.text.NumberFormat;
-import java.util.Locale;
-
-
 public class PerHourPaymentWorker extends Worker{
-    static final double WORKING_HOURS_IN_MONTH = 8.0 * 20.8;
+    static final int WORKING_HOURS_IN_MONTH = 8 * 21;
 
     private int hourPayment;
 
@@ -13,7 +9,7 @@ public class PerHourPaymentWorker extends Worker{
     }
 
     @Override
-    double getAveragePayment() {
+    int getAveragePayment() {
         return hourPayment * WORKING_HOURS_IN_MONTH;
     }
 
