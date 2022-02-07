@@ -1,8 +1,3 @@
-
-import java.text.NumberFormat;
-import java.util.Locale;
-
-
 public class FixPaymentWorker extends Worker{
     private int monthPayment;
 
@@ -12,14 +7,13 @@ public class FixPaymentWorker extends Worker{
     }
 
     @Override
-    double getAveragePayment() {
+    int getAveragePayment() {
         return monthPayment;
     }
 
     @Override
     public String toString() {
-        NumberFormat fmt = NumberFormat.getCurrencyInstance(Locale.US);
-        return super.toString() + " fixed " + fmt.format(getAveragePayment());
+        return super.toString() + " Оклад в рублях " + getAveragePayment();
     }
 }
 

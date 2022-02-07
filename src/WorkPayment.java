@@ -1,37 +1,39 @@
-import java.util.*;
-
-
-
 public class WorkPayment {
     public static void main(String[] args) {
-        int id = 0;
-        PerHourPaymentWorker[] workers=new PerHourPaymentWorker[10];
-        FixPaymentWorker[] workers1=new FixPaymentWorker[10];
 
-//          Set<Worker> workers = new TreeSet<>(new Comparator<Worker>() {
-//            public int compare(Worker a, Worker b) {
-//                double diff = a.getAveragePayment() - b.getAveragePayment();
-//                if (diff > 0)
-//                    return -1;
-//                else if (diff < 0)
-//                    return 1;
-//                else {
-//                    int n = a.getName().compareTo(b.getName());
-//                    return (n == 0) ? 1 : n;
-//                }
-//            }
-//        });
+        PerHourPaymentWorker[] workers = new PerHourPaymentWorker[10];
+        FixPaymentWorker[] workers1 = new FixPaymentWorker[10];
 
-//        workers[0].add(new FixPaymentWorker(++id, "Петрович", 800));
-//        workers.add(new FixPaymentWorker(++id, "Семён", 2000));
-       workers[0]=new PerHourPaymentWorker(++id, "Снежана", 150);
-       workers[1]=(new PerHourPaymentWorker(++id, "Элеонора", 100));
-       workers1[0]=new FixPaymentWorker(++id, "Йохтан Палыч", 25000);
-        workers1[1]=new FixPaymentWorker(++id,"Чебурашкин",100);
 
-        for (Worker w : workers)
-            System.out.println(w);
-        for (Worker w : workers1)
-            System.out.println(w);
+        workers[0] = new PerHourPaymentWorker(345, "Перепелкин С.Ю.", 120);
+        workers[1] = (new PerHourPaymentWorker(544, "Крокодилова Э.С.", 100));
+        workers[2] = (new PerHourPaymentWorker(125, "Жирафов К.Г.", 130));
+        workers[3] = (new PerHourPaymentWorker(447, "Коровин С.С.", 90));
+
+
+        workers1[0] = new FixPaymentWorker(456, "Коростылев Н.С.", 25000);
+        workers1[1] = new FixPaymentWorker(759, "Сечин Б.Ф.", 10000);
+        workers1[2] = new FixPaymentWorker(124, "Чеботарев Р.Г.", 4500);
+        workers1[3] = new FixPaymentWorker(378, "Черемисин Ж.В.", 35000);
+        int drt = 0;
+        System.out.println("Номер  " + drt);
+        System.out.println("Почасовая оплата ");
+        for (Worker w : workers) {
+            if (w != null) {
+                System.out.println(w);
+                drt += w.getAveragePayment();
+            }
+        }
+        System.out.println("Фонд заработной платы   " + drt);
+
+        drt = 0;
+        for (Worker w : workers1) {
+            if (w != null) {
+                System.out.println(w);
+                drt += w.getAveragePayment();
+            }
+
+        }
+        System.out.println("Фонд заработной платы   " + drt);
     }
 }
