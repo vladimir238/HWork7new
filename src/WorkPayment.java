@@ -16,7 +16,6 @@ public class WorkPayment {
         workers1[2] = new FixPaymentWorker(124, "Чеботарев Р.Г.", 4500);
         workers1[3] = new FixPaymentWorker(378, "Черемисин Ж.В.", 35000);
         int drt = 0;
-        System.out.println("Номер  " + drt);
         System.out.println("Почасовая оплата ");
         for (Worker w : workers) {
             if (w != null) {
@@ -26,7 +25,9 @@ public class WorkPayment {
         }
         System.out.println("Фонд заработной платы   " + drt);
 
+
         drt = 0;
+        System.out.println("Оклад    ");
         for (Worker w : workers1) {
             if (w != null) {
                 System.out.println(w);
