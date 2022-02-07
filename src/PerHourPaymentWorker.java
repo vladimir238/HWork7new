@@ -8,6 +8,7 @@ public class PerHourPaymentWorker extends Worker{
         this.hourPayment = hourPayment;
     }
 
+
     @Override
     int getAveragePayment() {
         return hourPayment * WORKING_HOURS_IN_MONTH;
